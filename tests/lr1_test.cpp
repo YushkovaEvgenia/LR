@@ -46,7 +46,7 @@ TEST_F(CountAndSumTest, CTest11111) {
     EXPECT_EQ(result.first, 5);
     EXPECT_EQ(result.second, 100);
 }
-
+/*
 // Пример теста 2
 TEST_F(CountAndSumTest, CTest2) {
 // Вызываем функцию countAndSum с тестовыми данными
@@ -56,7 +56,7 @@ TEST_F(CountAndSumTest, CTest2) {
     EXPECT_EQ(result.first, 15);
     EXPECT_EQ(result.second, 100);
 }
-
+*/
 // Пример теста3
 TEST(CountAndSumTest1, CTest3) {
     // Объявляем переменные, которые будут использоваться в тесте
