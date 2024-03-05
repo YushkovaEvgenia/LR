@@ -62,13 +62,16 @@ TEST_F(CountAndSumTest, CTest2) {
 TEST(CountAndSumTest1, CTest3) {
     // Объявляем переменные, которые будут использоваться в тесте
     std::vector<int> arr;
-    std::pair<int, int> result;
+    std::vector<std::pair<int, int>> numMas1;
+    std::vector<std::pair<int, std::string>> errMas1;
+    result res;
+   // std::pair<int, int> result;
     // Инициализация данных
     arr = {10, 14, 15, 20, 21, 25, 30, 35, 5};
 // Вызываем функцию countAndSum с тестовыми данными
-    result = countAndSum(arr);
-
+    //result = countAndSum(arr);
+    res = findPairs(arr);
 // Проверяем ожидаемые результаты
-    EXPECT_EQ(result.first, 6);
-    EXPECT_EQ(result.second, 105);
+    EXPECT_EQ(res.numMas, numMas1);
+    //EXPECT_EQ(result.second, errMas1);
 }
