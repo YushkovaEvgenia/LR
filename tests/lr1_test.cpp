@@ -6,72 +6,112 @@
 // Подробнее https://google.github.io/googletest/reference/testing.html
 
 // Тестовый класс
-class CountAndSumTest : public ::testing::Test {
+class FindPairs : public ::testing::Test {
 protected:
     // Здесь вы можете добавить дополнительные настройки для тестов
     // в функции SetUp()
     void SetUp() override {
         // Например, инициализация данных
-        arr = {10, 14, 15, 20, 21, 25, 30};
     }
 
     // Здесь вы можете освободить ресурсы, если это необходимо
     // в функции TearDown()
     void TearDown() override {
         // Например, очистка данных
+        /*
         arr.clear();
+        waitingResult.numMas.clear();
+        waitingResult.errMas.clear();
+        realResult.numMas.clear();
+        realResult.errMas.clear();*/
+
     }
 
     // Объявляем переменные, которые будут использоваться в тестах
-    std::vector<int> arr;
-    std::pair<int, int> result;
+    test testdata;
 };
 
-// Пример теста1
-TEST_F(CountAndSumTest, CTest1) {
-// Вызываем функцию countAndSum с тестовыми данными
-    result = countAndSum(arr);
+TEST_F(FindPairs, CTest1) {
+    // Вызываем функцию с тестовыми данными
+    testdata = readFromFile("..//Test1.txt");
+    testdata.realResult = findPairs(testdata.array);
+    testdata.testname = "Test1";
+    writeInFile(testdata);
 
-// Проверяем ожидаемые результаты
-    EXPECT_EQ(result.first, 5);
-    EXPECT_EQ(result.second, 100);
+    // Проверяем ожидаемые результаты
+    EXPECT_EQ(testdata.realResult.numMas, testdata.waitingResult.numMas);
+    EXPECT_EQ(testdata.realResult.errMas, testdata.waitingResult.errMas);
 }
 
-// Пример теста111111
-TEST_F(CountAndSumTest, CTest11111) {
-// Вызываем функцию countAndSum с тестовыми данными
-    result = countAndSum(arr);
+TEST_F(FindPairs, CTest2) {
+    // Вызываем функцию с тестовыми данными
+    testdata = readFromFile("..//Test2.txt");
+    testdata.realResult = findPairs(testdata.array);
+    testdata.testname = "Test2";
+    writeInFile(testdata);
 
-// Проверяем ожидаемые результаты
-    EXPECT_EQ(result.first, 5);
-    EXPECT_EQ(result.second, 100);
+    // Проверяем ожидаемые результаты
+    EXPECT_EQ(testdata.realResult.numMas, testdata.waitingResult.numMas);
+    EXPECT_EQ(testdata.realResult.errMas, testdata.waitingResult.errMas);
 }
 
-/*
-// Пример теста 2
-TEST_F(CountAndSumTest, CTest2) {
-// Вызываем функцию countAndSum с тестовыми данными
-    result = countAndSum(arr);
+TEST_F(FindPairs, CTest3) {
+    // Вызываем функцию с тестовыми данными
+    testdata = readFromFile("..//Test3.txt");
+    testdata.realResult = findPairs(testdata.array);
+    testdata.testname = "Test3";
+    writeInFile(testdata);
 
-// Проверяем ожидаемые результаты
-    EXPECT_EQ(result.first, 15);
-    EXPECT_EQ(result.second, 100);
+    // Проверяем ожидаемые результаты
+    EXPECT_EQ(testdata.realResult.numMas, testdata.waitingResult.numMas);
+    EXPECT_EQ(testdata.realResult.errMas, testdata.waitingResult.errMas);
 }
-*/
-// Пример теста3
-TEST(CountAndSumTest1, CTest3) {
-    // Объявляем переменные, которые будут использоваться в тесте
-    std::vector<int> arr;
-    std::vector<std::pair<int, int>> numMas1;
-    std::vector<std::pair<int, std::string>> errMas1;
-    result res;
-   // std::pair<int, int> result;
-    // Инициализация данных
-    arr = {10, 14, 15, 20, 21, 25, 30, 35, 5};
-// Вызываем функцию countAndSum с тестовыми данными
-    //result = countAndSum(arr);
-    res = findPairs(arr);
-// Проверяем ожидаемые результаты
-    EXPECT_EQ(res.numMas, numMas1);
-    //EXPECT_EQ(result.second, errMas1);
+
+TEST_F(FindPairs, CTest4) {
+    // Вызываем функцию с тестовыми данными
+    testdata = readFromFile("..//Test4.txt");
+    testdata.realResult = findPairs(testdata.array);
+    testdata.testname = "Test4";
+    writeInFile(testdata);
+
+    // Проверяем ожидаемые результаты
+    EXPECT_EQ(testdata.realResult.numMas, testdata.waitingResult.numMas);
+    EXPECT_EQ(testdata.realResult.errMas, testdata.waitingResult.errMas);
+}
+
+TEST_F(FindPairs, CTest5) {
+    // Вызываем функцию с тестовыми данными
+    testdata = readFromFile("..//Test5.txt");
+    testdata.realResult = findPairs(testdata.array);
+    testdata.testname = "Test5";
+    writeInFile(testdata);
+
+    // Проверяем ожидаемые результаты
+    EXPECT_EQ(testdata.realResult.numMas, testdata.waitingResult.numMas);
+    EXPECT_EQ(testdata.realResult.errMas, testdata.waitingResult.errMas);
+}
+
+TEST_F(FindPairs, CTest6) {
+    // Вызываем функцию с тестовыми данными
+    testdata = readFromFile("..//Test6.txt");
+    testdata.realResult = findPairs(testdata.array);
+    testdata.testname = "Test6";
+    writeInFile(testdata);
+
+    // Проверяем ожидаемые результаты
+    EXPECT_EQ(testdata.realResult.numMas, testdata.waitingResult.numMas);
+    EXPECT_EQ(testdata.realResult.errMas, testdata.waitingResult.errMas);
+}
+
+TEST_F(FindPairs, CTest7) {
+    // Вызываем функцию с тестовыми данными
+    testdata = readFromFile("..//Test7.txt");
+    testdata.realResult = findPairs(testdata.array);
+    testdata.testname = "Test7";
+    writeInFile(testdata);
+
+    // Проверяем ожидаемые результаты
+    EXPECT_EQ(testdata.realResult.numMas, testdata.waitingResult.numMas);
+    EXPECT_EQ(testdata.realResult.errMas, testdata.waitingResult.errMas);
+   
 }
