@@ -18,13 +18,6 @@ protected:
     // в функции TearDown()
     void TearDown() override {
         // Например, очистка данных
-        /*
-        arr.clear();
-        waitingResult.numMas.clear();
-        waitingResult.errMas.clear();
-        realResult.numMas.clear();
-        realResult.errMas.clear();*/
-
     }
 
     // Объявляем переменные, которые будут использоваться в тестах
