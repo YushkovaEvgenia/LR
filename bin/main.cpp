@@ -11,6 +11,7 @@ int main() {
 	result waitingResult = findPairs2(arr);
 	writeInFile("../Test1.txt", arr, waitingResult);
 	writeInFile("./Test1.txt", arr, waitingResult);
+	writeInFile("LR/Test1.txt", arr, waitingResult);
 
 	/*
 
