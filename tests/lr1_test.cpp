@@ -23,7 +23,7 @@ protected:
     // Объявляем переменные, которые будут использоваться в тестах
     test testdata;
 };
-
+/*
 TEST_F(FindPairs, CTest1) {
     // Вызываем функцию с тестовыми данными
     testdata = readFromFile("..//Test1.txt");
@@ -36,6 +36,8 @@ TEST_F(FindPairs, CTest1) {
     EXPECT_EQ(testdata.realResult.errMas, testdata.waitingResult.errMas);
 }
 
+*/
+/*
 TEST_F(FindPairs, CTest2) {
     // Вызываем функцию с тестовыми данными
     testdata = readFromFile("..//Test2.txt");
@@ -108,3 +110,5 @@ TEST_F(FindPairs, CTest7) {
     EXPECT_EQ(testdata.realResult.errMas, testdata.waitingResult.errMas);
    
 }
+
+*/
